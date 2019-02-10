@@ -1,0 +1,301 @@
+
+// Custom Fonts
+// @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700');
+
+$theme-font: 'Work Sans', sans-serif;
+$theme-color:#6B4D96;
+$bcolor:#000;
+$wcolor:#fff;
+$gcolor:#808080;
+$grcolor:#41a30d;
+
+// Start Sass Mixins
+
+@mixin animation($avalue) {
+  -webkit-animation: #{$avalue};
+  -moz-animation: #{$avalue};
+  -o-animation: #{$avalue};
+  animation: #{$avalue};
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+	background-clip: padding-box; 
+}
+
+@mixin border-radius-s($tl, $tr, $br, $bl) {
+	border-top-left-radius: $tl;
+	border-top-right-radius: $tr;
+	border-bottom-right-radius: $br;
+	border-bottom-left-radius: $bl;
+	-webkit-border-top-left-radius: $tl;
+	-webkit-border-top-right-radius: $tr;
+	-webkit-border-bottom-right-radius: $br;
+	-webkit-border-bottom-left-radius: $bl;
+	-moz-border-radius-topleft: $tl;
+	-moz-border-radius-topright: $tr;
+	-moz-border-radius-bottomright: $br;
+	-moz-border-radius-bottomleft: $bl;
+}
+
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+@mixin keyframes($aname) {
+  @-webkit-keyframes #{$aname} {
+    @content;
+  }
+  @-o-keyframes #{$aname} {
+    @content;
+  }
+  @-moz-keyframes #{$aname} {
+    @content;
+  }
+  @keyframes #{$aname} {
+    @content;
+  }
+}
+
+@mixin linear-gradient($sc,$sp,$ec,$ep:null) {
+  /* fallback/image non-cover color */
+  background: $sc;
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, $sc $sp, $ec $ep);
+
+  /* Safari 4+, Chrome 1+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop($sp, $sc), color-stop($ep, $ec));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-linear-gradient(left, $sc $sp, $ec $ep);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, $sc $sp, $ec $ep);
+
+  /* IE10+ */
+  background: -ms-linear-gradient(left, $sc $sp, $ec $ep);
+
+  /* Standard */
+  background: linear-gradient(to right, $sc $sp, $ec $ep);
+
+  /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$sc', endColorstr='$ec',GradientType=1 );
+}
+
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin placeholder {
+  &.placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
+}
+
+@mixin scale ($svalue) {
+	@include transform(scale($svalue));
+}
+
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+@mixin transition($property,$time,$effect){
+	-webkit-transition: $property $time $effect;
+	-moz-transition: $property $time $effect;
+  	-ms-transition: $property $time $effect;
+	-o-transition: $property $time $effect;
+  	transition: $property $time $effect;
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+   	-moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+  	transform: $transforms;
+}
+
+@mixin translate ($x,$y) {
+	@include transform(translate($x,$y));
+}
+
+// *********************************************
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html {overflow-x: hidden;}
+
+body {
+	background: #fff;
+  color: #333;
+  font-family:$theme-font;
+}
+
+ul li {list-style: none;}
+
+.dropdown:hover>.dropdown-menu{
+	display:block;
+}
+
+a{
+	color:$bcolor;
+
+	&:hover, &:visited, &:focus {
+    background-color: transparent;
+  	text-decoration: none;
+		outline: 0;
+	}
+}
+
+.zoomIn:hover{
+	@include scale(1.2);
+	@include transition(all,0.8s,ease);
+}
+
+.tbtn{
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.btn-fill{
+	background: $theme-color;
+  border: 2px solid $theme-color;
+  color: $wcolor;
+
+  &:hover{
+  	background: $bcolor;
+  	border: 2px solid $bcolor;
+  	color: $wcolor;
+    @include transition(all,0.5s,ease-in);
+  }
+}
+
+.btn-outline{
+	background: transparent;
+  border: 1px solid #b5b5b5;
+  color: #757575;
+  @include transition(all,0.4s,ease-in);
+
+  &:hover{
+  	background: #757575;
+  	border: 1px solid #b5b5b5;
+  	color: $wcolor !important;
+  }
+}
+
+.sp{padding: 5% 0;}
+
+.section-header{
+
+}
+
+.content{
+  width: 93%;
+  margin: 0 auto;
+}
+
+.tcolor{color:$theme-color !important;}
+
+
+// CSS For Header Section
+
+
+
+// ************************************
+
+/* CSS For Home Slider Section */
+
+
+
+// ************************************
+
+
+
+// CSS For Newsletter Section
+
+
+
+// ************************************
+
+// CSS For Footer Section
+
+@include keyframes(pulse){
+  0%{
+    @include scale(1.0)
+  }
+
+  50%{
+    @include scale(0.9)
+  }
+
+  100%{
+    @include scale(1.0)
+  }
+}
+
+.footer{
+    // height: 60px;
+    background: #262626;
+    color: $wcolor;
+    padding-top: 20px;
+    text-align: center;
+
+    .social{
+      a{
+        width: 45px;
+        height: 45px;
+        border: 1px solid #4d4d4d;
+        border-radius: 50%;
+        color: #a5a4a4;
+        display: inline-block;
+        line-height: 45px;
+        margin-left: 10px;
+
+        &:hover{
+          @include animation('pulse 1s');
+          @include transition(all,0.3s,ease);
+        }
+      }
+    }
+
+    p{
+	    font-size: 14px;
+	    font-weight: 400;
+    	text-transform: capitalize;
+
+    	a {color:$theme-color;}
+    }
+}
+
+// ************************************
+
+// CSS For About Page
+
+
+// ************************************
+
+
+// CSS For Tags Page
+
+
+// ************************************
+
