@@ -1,11 +1,9 @@
 
 // Custom Fonts
-// @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800');
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-$theme-font: 'Work Sans', sans-serif;
-$theme-color:#6B4D96;
+$theme-font: 'Roboto', sans-serif;
+$theme-color:#FF6C37;
 $bcolor:#000;
 $wcolor:#fff;
 $gcolor:#808080;
@@ -204,9 +202,7 @@ a{
 
 .sp{padding: 5% 0;}
 
-.section-header{
 
-}
 
 .content{
   width: 93%;
@@ -218,7 +214,31 @@ a{
 
 // CSS For Header Section
 
+.vision-header{
+  .vision-top-link{
+    height: 25px;
+    background: #eaeaea;
+    line-height: 25px;
+    text-align: right;
 
+    ul{
+      li{
+        display: inline-block;
+        a{
+          font-size: 13px;
+          padding: 0 10px;
+          text-transform: uppercase;
+
+          &:hover{
+            color: $theme-color;
+            text-decoration: underline;
+            @include transition(all,0.4s,ease);
+          }
+        }
+      }
+    }
+  }
+}
 
 // ************************************
 
@@ -238,53 +258,7 @@ a{
 
 // CSS For Footer Section
 
-@include keyframes(pulse){
-  0%{
-    @include scale(1.0)
-  }
 
-  50%{
-    @include scale(0.9)
-  }
-
-  100%{
-    @include scale(1.0)
-  }
-}
-
-.footer{
-    // height: 60px;
-    background: #262626;
-    color: $wcolor;
-    padding-top: 20px;
-    text-align: center;
-
-    .social{
-      a{
-        width: 45px;
-        height: 45px;
-        border: 1px solid #4d4d4d;
-        border-radius: 50%;
-        color: #a5a4a4;
-        display: inline-block;
-        line-height: 45px;
-        margin-left: 10px;
-
-        &:hover{
-          @include animation('pulse 1s');
-          @include transition(all,0.3s,ease);
-        }
-      }
-    }
-
-    p{
-	    font-size: 14px;
-	    font-weight: 400;
-    	text-transform: capitalize;
-
-    	a {color:$theme-color;}
-    }
-}
 
 // ************************************
 
