@@ -91,7 +91,7 @@ a {
     display: inline-block; }
     .vision-header .vision-top-link ul li a {
       font-size: 13px;
-      padding: 0 10px;
+      padding: 0 20px;
       text-transform: uppercase; }
       .vision-header .vision-top-link ul li a:hover {
         color: #FF6C37;
@@ -101,7 +101,85 @@ a {
         -ms-transition: all 0.4s ease;
         -o-transition: all 0.4s ease;
         transition: all 0.4s ease; }
+.vision-header .vision-action-bar {
+  height: 72px;
+  background: #fff;
+  line-height: 50px;
+  padding: 10px 0; }
+  .vision-header .vision-action-bar .mobile-nav-icon a {
+    color: #000;
+    font-size: 30px; }
+  .vision-header .vision-action-bar .vision-search-box .form-control {
+    height: 45px;
+    background: #eaeaea;
+    box-shadow: none;
+    border: 1px solid #eaeaea;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0; }
+  .vision-header .vision-action-bar .vision-search-box button {
+    height: 45px;
+    background: #FF6C37;
+    border: 1px solid #FF6C37;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    color: #fff;
+    margin-top: -5px;
+    padding: 6px 15px; }
+  .vision-header .vision-action-bar .vision-cart-icon {
+    text-align: center; }
+    .vision-header .vision-action-bar .vision-cart-icon a {
+      color: #000;
+      font-size: 30px; }
+      .vision-header .vision-action-bar .vision-cart-icon a .badge {
+        position: absolute;
+        top: 6px;
+        right: 20px;
+        background: #FF6C37;
+        color: #fff; }
 
 /* CSS For Home Slider Section */
+.carousel-fade .carousel-indicators {
+  bottom: -5px; }
+  .carousel-fade .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    border-radius: 12px; }
+  .carousel-fade .carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    margin: 1px; }
+.carousel-fade .carousel-inner .item {
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in; }
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0.5; }
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1; }
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0); }
+.carousel-fade .carousel-control {
+  z-index: 2; }
 
 /*# sourceMappingURL=theme.css.map */
