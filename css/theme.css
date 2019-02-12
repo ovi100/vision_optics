@@ -142,9 +142,108 @@ a {
         color: #fff; }
 
 /* CSS For Home Slider Section */
-.carousel-fade .carousel-indicators {
-  bottom: -5px; }
-  .carousel-fade .carousel-indicators li {
+.categories-hslider .homecategory {
+  position: absolute;
+  left: 105px;
+  height: 345px;
+  width: 195px;
+  background: #fff;
+  padding: 10px 0;
+  z-index: 5; }
+  .categories-hslider .homecategory ul li {
+    height: 25px;
+    cursor: pointer;
+    line-height: 25px;
+    padding: 0 10px; }
+    .categories-hslider .homecategory ul li a {
+      color: #808080;
+      font-size: 13px;
+      text-transform: capitalize; }
+      .categories-hslider .homecategory ul li a i {
+        line-height: 25px;
+        visibility: hidden; }
+    .categories-hslider .homecategory ul li .secondcat-list {
+      top: -12px;
+      left: 193px;
+      height: 346px;
+      width: 195px;
+      border: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0;
+      -moz-box-shadow: -2px 2px 2px #ddd;
+      -webkit-box-shadow: -2px 2px 2px #ddd;
+      box-shadow: -2px 2px 2px #ddd;
+      padding: 10px 0; }
+      .categories-hslider .homecategory ul li .secondcat-list li {
+        height: 25px;
+        cursor: pointer;
+        line-height: 25px;
+        padding: 0 10px; }
+        .categories-hslider .homecategory ul li .secondcat-list li a {
+          color: #808080;
+          font-size: 13px;
+          line-height: 25px;
+          padding: 0;
+          text-transform: capitalize; }
+          .categories-hslider .homecategory ul li .secondcat-list li a i {
+            line-height: 25px;
+            visibility: hidden; }
+          .categories-hslider .homecategory ul li .secondcat-list li a:hover {
+            background: none; }
+        .categories-hslider .homecategory ul li .secondcat-list li:hover {
+          background: #eaeaea; }
+          .categories-hslider .homecategory ul li .secondcat-list li:hover a {
+            color: #337ab7; }
+            .categories-hslider .homecategory ul li .secondcat-list li:hover a i {
+              visibility: visible; }
+      .categories-hslider .homecategory ul li .secondcat-list .thirdcat-list {
+        top: -12px;
+        left: 193px;
+        height: 346px;
+        width: 195px;
+        border: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: -2px 2px 2px #ddd;
+        -webkit-box-shadow: -2px 2px 2px #ddd;
+        box-shadow: -2px 2px 2px #ddd;
+        padding: 10px 0; }
+        .categories-hslider .homecategory ul li .secondcat-list .thirdcat-list li {
+          height: 25px;
+          cursor: pointer;
+          line-height: 25px;
+          padding: 0 10px; }
+          .categories-hslider .homecategory ul li .secondcat-list .thirdcat-list li a {
+            color: #808080;
+            font-size: 13px;
+            line-height: 25px;
+            padding: 0;
+            text-transform: capitalize; }
+            .categories-hslider .homecategory ul li .secondcat-list .thirdcat-list li a i {
+              line-height: 25px;
+              visibility: hidden; }
+            .categories-hslider .homecategory ul li .secondcat-list .thirdcat-list li a:hover {
+              background: none; }
+          .categories-hslider .homecategory ul li .secondcat-list .thirdcat-list li:hover {
+            background: #eaeaea; }
+            .categories-hslider .homecategory ul li .secondcat-list .thirdcat-list li:hover a {
+              color: #337ab7; }
+              .categories-hslider .homecategory ul li .secondcat-list .thirdcat-list li:hover a i {
+                visibility: visible; }
+    .categories-hslider .homecategory ul li:hover {
+      background: #eaeaea; }
+      .categories-hslider .homecategory ul li:hover a {
+        color: #337ab7; }
+        .categories-hslider .homecategory ul li:hover a i {
+          visibility: visible; }
+.categories-hslider .carousel-fade .carousel-indicators {
+  bottom: -5px;
+  z-index: 2; }
+  .categories-hslider .carousel-fade .carousel-indicators li {
     width: 12px;
     height: 12px;
     background-color: #ddd;
@@ -153,33 +252,33 @@ a {
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     border-radius: 12px; }
-  .carousel-fade .carousel-indicators .active {
+  .categories-hslider .carousel-fade .carousel-indicators .active {
     width: 12px;
     height: 12px;
     background-color: #fff;
     border: 1px solid #fff;
     margin: 1px; }
-.carousel-fade .carousel-inner .item {
+.categories-hslider .carousel-fade .carousel-inner .item {
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
   -ms-transition: all 0.5s ease-in;
   -o-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in; }
-.carousel-fade .carousel-inner .item,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
+.categories-hslider .carousel-fade .carousel-inner .item,
+.categories-hslider .carousel-fade .carousel-inner .active.left,
+.categories-hslider .carousel-fade .carousel-inner .active.right {
   opacity: 0.5; }
-.carousel-fade .carousel-inner .active,
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
+.categories-hslider .carousel-fade .carousel-inner .active,
+.categories-hslider .carousel-fade .carousel-inner .next.left,
+.categories-hslider .carousel-fade .carousel-inner .prev.right {
   opacity: 1; }
-.carousel-fade .carousel-inner .next,
-.carousel-fade .carousel-inner .prev,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
+.categories-hslider .carousel-fade .carousel-inner .next,
+.categories-hslider .carousel-fade .carousel-inner .prev,
+.categories-hslider .carousel-fade .carousel-inner .active.left,
+.categories-hslider .carousel-fade .carousel-inner .active.right {
   left: 0;
   transform: translate3d(0, 0, 0); }
-.carousel-fade .carousel-control {
+.categories-hslider .carousel-fade .carousel-control {
   z-index: 2; }
 
 /*# sourceMappingURL=theme.css.map */

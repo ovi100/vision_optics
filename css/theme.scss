@@ -295,58 +295,185 @@ a{
 // ************************************
 
 /* CSS For Home Slider Section */
+.categories-hslider{
+  .homecategory{
+    position: absolute;
+    left: 105px;
+    height: 345px;
+    width: 195px;
+    background: $wcolor;
+    padding: 10px 0;
+    z-index: 5;
 
-.carousel-fade{
-  .carousel-indicators{
-    bottom: -5px;
+    ul{
+      li{
+        height: 25px;
+        cursor: pointer;
+        line-height: 25px;
+        padding: 0 10px;
+        a{
+          color: $gcolor;
+          font-size: 13px;
+          text-transform: capitalize;
 
-    li{
-      width: 12px;
-      height: 12px;
-      background-color: #ddd;
-      border: 1px solid #ddd;
-      @include border-radius(12px);
-    }
+          i{
+            line-height: 25px;
+            visibility: hidden;
+          }
+        }
 
-    .active{
-      width: 12px;
-      height: 12px;
-      background-color: $wcolor;
-      border: 1px solid $wcolor;
-      margin: 1px;
+        // Second Category List
+        .secondcat-list{
+          top: -12px;
+          left: 193px;
+          height: 346px;
+          width: 195px;
+          border: 0;
+          @include border-radius(0); 
+          @include box-shadow(-2px 2px 2px #ddd);
+          padding: 10px 0;
+
+          li{
+            height: 25px;
+            cursor: pointer;
+            line-height: 25px;
+            padding: 0 10px;
+            a{
+              color: $gcolor;
+              font-size: 13px;
+              line-height: 25px;
+              padding: 0;
+              text-transform: capitalize;
+
+              i{
+                line-height: 25px;
+                visibility: hidden;
+              }
+
+              &:hover{background: none;}
+            }
+
+            &:hover{
+              background: #eaeaea;
+              a{
+                color: #337ab7;
+                i{
+                  visibility: visible;
+                }
+              }
+            }
+          }
+
+          // Third Category List
+          .thirdcat-list{
+            top: -12px;
+            left: 193px;
+            height: 346px;
+            width: 195px;
+            border: 0;
+            @include border-radius(0); 
+            @include box-shadow(-2px 2px 2px #ddd);
+            padding: 10px 0;
+
+            li{
+              height: 25px;
+              cursor: pointer;
+              line-height: 25px;
+              padding: 0 10px;
+              a{
+                color: $gcolor;
+                font-size: 13px;
+                line-height: 25px;
+                padding: 0;
+                text-transform: capitalize;
+
+                i{
+                  line-height: 25px;
+                  visibility: hidden;
+                }
+
+                &:hover{background: none;}
+              }
+
+              &:hover{
+                background: #eaeaea;
+                a{
+                  color: #337ab7;
+                  i{
+                    visibility: visible;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:hover{
+          background: #eaeaea;
+          a{
+            color: #337ab7;
+            i{
+              visibility: visible;
+            }
+          }
+        }
+      }
     }
   }
-
-  .carousel-inner{
-    .item{
-      @include transition(all,0.5s,ease-in);
-    }
-      
-    .item,
-    .active.left,
-    .active.right{
-      opacity: 0.5;
-    }
-
-    .active,
-    .next.left,
-    .prev.right {
-      opacity: 1;
-    }
-
-    .next,
-    .prev,
-    .active.left,
-    .active.right {
-      left: 0;
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .carousel-control {
+  .carousel-fade{
+    .carousel-indicators{
+      bottom: -5px;
       z-index: 2;
+
+      li{
+        width: 12px;
+        height: 12px;
+        background-color: #ddd;
+        border: 1px solid #ddd;
+        @include border-radius(12px);
+      }
+
+      .active{
+        width: 12px;
+        height: 12px;
+        background-color: $wcolor;
+        border: 1px solid $wcolor;
+        margin: 1px;
+      }
+    }
+
+    .carousel-inner{
+      .item{
+        @include transition(all,0.5s,ease-in);
+      }
+        
+      .item,
+      .active.left,
+      .active.right{
+        opacity: 0.5;
+      }
+
+      .active,
+      .next.left,
+      .prev.right {
+        opacity: 1;
+      }
+
+      .next,
+      .prev,
+      .active.left,
+      .active.right {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
   }
 }
+
 
 // ************************************
 
