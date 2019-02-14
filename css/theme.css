@@ -427,6 +427,19 @@ a {
 
 .catalog {
   padding: 2% 0; }
+  .catalog .row .col-lg-2 {
+    padding-right: 0; }
+  .catalog .catalog-filter .filter {
+    border-bottom: 1px solid #ddd;
+    margin-top: 15px; }
+    .catalog .catalog-filter .filter .filter-name {
+      font-size: 15px;
+      text-transform: capitalize; }
+    .catalog .catalog-filter .filter .filter-option {
+      height: 162px;
+      overflow-y: auto; }
+      .catalog .catalog-filter .filter .filter-option .checkbox label {
+        color: #757575; }
   .catalog .catalog-sort {
     border-bottom: 1px solid #ddd;
     margin-bottom: 20px;
