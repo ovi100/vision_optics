@@ -206,16 +206,19 @@ a{
   }
 }
 
-.sp{padding: 5% 0;}
+.tcolor{color:$theme-color !important;}
 
-
-
-.content{
-  width: 93%;
-  margin: 0 auto;
+input[type=number].input_noSpinners::-webkit-inner-spin-button,
+input[type=number].input_noSpinners::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    margin: 0;
+}
+input[type=number].input_noSpinners {
+    -moz-appearance: textfield;
 }
 
-.tcolor{color:$theme-color !important;}
 
 
 // CSS For Header Section
@@ -478,6 +481,73 @@ a{
 }
 // ************************************
 
+// CSS For Product Box Page
+.product-box{
+  height: auto;
+  padding-bottom: 10px;
+  .product-photo{margin-bottom: 15px;}
+  .product-tag{
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    right: 25px;
+
+    span{
+      background: $theme-color;
+      color: $wcolor;
+      font-size: 11px;
+      padding: 2px 5px;
+      text-transform: uppercase;
+    }
+  }
+  .product-name{
+    height: 45px;
+    padding: 0 8px;
+
+    a{
+      color: #787a6c;
+      font-size: 13px;
+      @include transition(all,0.5s,ease);
+
+      &:hover{
+        color: $theme-color;
+      }
+    }
+  }
+  .product-price{
+    padding: 0 8px;
+
+    span{
+      color: $theme-color;
+      font-size: 18px;
+    }
+  }
+  .discount-price{
+    color: #757575;
+    font-size: 10px;
+    padding: 0 8px;
+  }
+  .product-rating{
+    margin: 8px 0;
+    padding: 0 8px;
+
+    i{color: #ffd700;}
+  }
+  .product-button{
+    padding: 0 8px;
+    visibility: hidden;
+  }
+
+  &:hover{
+    @include box-shadow(0 0 2px #ddd);
+
+    .product-button{
+      visibility: visible;
+    }
+  }
+}
+// ************************************
+
 // CSS For Feature Product Section
 
 .feature-product{
@@ -488,71 +558,6 @@ a{
     text-align: center;
   }
   .row{margin-bottom: 10px;}
-  .product-box{
-    height: auto;
-    padding-bottom: 10px;
-    .product-photo{margin-bottom: 15px;}
-    .product-tag{
-      position: absolute;
-      top: 5px;
-      left: 25px;
-      right: 25px;
-
-      span{
-        background: $theme-color;
-        color: $wcolor;
-        font-size: 11px;
-        padding: 2px 5px;
-        text-transform: uppercase;
-      }
-    }
-    .product-name{
-      height: 45px;
-      padding: 0 8px;
-
-      a{
-        color: #787a6c;
-        font-size: 13px;
-        @include transition(all,0.5s,ease);
-
-        &:hover{
-          color: $theme-color;
-        }
-      }
-    }
-    .product-price{
-      padding: 0 8px;
-
-      span{
-        color: $theme-color;
-        font-size: 18px;
-      }
-    }
-    .discount-price{
-      color: #757575;
-      font-size: 10px;
-      padding: 0 8px;
-
-    }
-    .product-rating{
-      margin: 8px 0;
-      padding: 0 8px;
-
-      i{color: #ffd700;}
-    }
-    .product-button{
-      padding: 0 8px;
-      visibility: hidden;
-    }
-
-    &:hover{
-      @include box-shadow(0 0 2px #ddd);
-
-      .product-button{
-        visibility: visible;
-      }
-    }
-  }
 }
 
 // ************************************
@@ -580,6 +585,7 @@ a{
       border-right: 0;
       @include border-radius(0);
       @include box-shadow(none);
+      color: $wcolor;
 
       @include placeholder{
         color: $wcolor;
@@ -681,68 +687,132 @@ a{
   }
   .catalog-product{
     .row{margin-bottom: 10px;}
-    .product-box{
-      height: auto;
-      padding-bottom: 10px;
-      .product-photo{margin-bottom: 15px;}
-      .product-tag{
-        position: absolute;
-        top: 5px;
-        left: 25px;
-        right: 25px;
+  }
+}
 
-        span{
-          background: $theme-color;
-          color: $wcolor;
-          font-size: 11px;
-          padding: 2px 5px;
-          text-transform: uppercase;
-        }
+// ************************************
+
+
+// CSS For Cart Page
+.cart{
+  background: #f7f7f7;
+  .cart-header{
+    background: #eaeaea;
+    color: #999;
+    padding: 10px;
+  }
+  .cart-item{
+    background: $wcolor;
+    @include box-shadow(0 0 2px #f5f5f5);
+    margin: 15px 0;
+
+    h4{
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    .item-info{
+      padding: 10px;
+
+      .item-price{
+        color: $theme-color;
+        font-size: 17px;
       }
-      .product-name{
-        height: 45px;
-        padding: 0 8px;
 
-        a{
-          color: #787a6c;
-          font-size: 13px;
-          @include transition(all,0.5s,ease);
+      .input-group{
+        span{
+          background: #f3f3f3;
+          border: 0;
+          @include border-radius(0);
+          color: #afaaaa;
+          cursor: pointer;
+          font-size: 20px;
 
           &:hover{
-            color: $theme-color;
+            background: #ddd;
+            color: $wcolor;
+            @include transition(all,0.4s,ease);
+          }
+        }
+        .form-control{
+          border: 0;
+          @include box-shadow(none);
+          text-align: center;
+
+          &:hover{
+            border: 1px solid #ddd;
+            @include transition(all,0.4s,ease);
           }
         }
       }
-      .product-price{
-        padding: 0 8px;
 
-        span{
-          color: $theme-color;
-          font-size: 18px;
+      .stock{margin-top: 5px;}
+
+      .item-icon{
+        margin-top: 10px;
+        button{
+          background: transparent;
+          border: 0;
+          color: #666;
+          font-size: 14px;
+        }
+
+        a{
+          color: #666;
+          font-size: 15px;
+          padding-right: 7px;
+
+          &:hover{color: $theme-color;}
         }
       }
-      .discount-price{
-        color: #757575;
-        font-size: 10px;
-        padding: 0 8px;
+    }
+  }
 
-      }
-      .product-rating{
-        margin: 8px 0;
-        padding: 0 8px;
+  .cart-summary{
+    background: $wcolor;
+    padding: 10px;
 
-        i{color: #ffd700;}
-      }
-      .product-button{
-        padding: 0 8px;
-        visibility: hidden;
-      }
+    .order-price {
+      border-bottom: 1px solid #ddd;
+      margin: 15px 0;
+      padding-bottom: 5px;
+    }
 
-      &:hover{
-        @include box-shadow(0 0 2px #ddd);
+    .order-checkout{
+      a{padding: 10px 20px;}
+    }
+  }
+}
 
-        .product-button{
-          visibility: visible;
+// ************************************
+
+// CSS For Product Page
+.product-details{
+  background: #EEF0F4;
+  padding: 10px 0;
+  .breadcrumb{
+    background: transparent;
+
+    li + li:before {
+      padding: 0 5px;
+      color: #ccc;
+      content: "\eab8";
+      font-family: IcoFont;
+    }
+  }
+  .product-info{
+    background: $wcolor;
+
+    .delivery-text{
+      background: #f9f9f9;
+
+      .delivery-option{
+        .del-header{
+          border-bottom: 1px solid #ddd;
+          padding: 10px;
+          text-transform: capitalize;
+
+          p{margin-top: 5px;}
         }
       }
     }
@@ -750,7 +820,6 @@ a{
 }
 
 // ************************************
-
 
 // CSS For Tags Page
 

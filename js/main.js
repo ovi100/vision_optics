@@ -55,6 +55,28 @@ $(document).ready(function(){
 
     // End Home Slider Js
 
+    $('.btn-qty').on('click',function(e){
+    	e.preventDefault();
+    
+    	var button = $(this);
+      	var oldValue = button.parent().find("input").val();
+      	var newVal;
+    
+    	if (button.text() == "+") {
+    	  	newVal = parseFloat(oldValue) + 1;
+    	} else{
+    		if (oldValue > 0) {newVal = parseFloat(oldValue) - 1;} else {newVal = 0;}
+    	}
+        button.parent().find("input").val(newVal);
+    });
+
+    $('#zoom_01').elevateZoom({
+	    zoomType: "inner",
+		cursor: "crosshair",
+		zoomWindowFadeIn: 500,
+		zoomWindowFadeOut: 750
+   	}); 
+
 
 });
 
