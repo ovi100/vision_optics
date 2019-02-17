@@ -539,14 +539,103 @@ input[type=number].input_noSpinners {
       content: "\eab8";
       font-family: IcoFont; }
   .product-details .product-info {
-    background: #fff; }
+    background: #fff;
+    -moz-box-shadow: 0 0 2px #ddd;
+    -webkit-box-shadow: 0 0 2px #ddd;
+    box-shadow: 0 0 2px #ddd; }
+    .product-details .product-info .product-text .p-name {
+      margin-bottom: 0; }
+    .product-details .product-info .product-text .share-option {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0; }
+      .product-details .product-info .product-text .share-option i {
+        color: #ffd700;
+        font-size: 10px; }
+      .product-details .product-info .product-text .share-option .rating {
+        color: #0cbdbd;
+        font-size: 10px; }
+      .product-details .product-info .product-text .share-option a {
+        color: #ababab;
+        padding: 0 5px; }
+    .product-details .product-info .product-text .p-price {
+      color: #FF6C37;
+      font-size: 25px;
+      margin: 20px 0; }
+    .product-details .product-info .product-text .quantity-btn {
+      margin-top: 20px;
+      margin-bottom: 15px; }
+      .product-details .product-info .product-text .quantity-btn .q-text {
+        color: #ababab;
+        float: left;
+        line-height: 30px; }
+      .product-details .product-info .product-text .quantity-btn .input-group {
+        width: 40%;
+        float: left;
+        margin: 0 15px;
+        z-index: 0; }
+        .product-details .product-info .product-text .quantity-btn .input-group span {
+          background: #f3f3f3;
+          border: 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          -ms-border-radius: 0;
+          border-radius: 0;
+          color: #afaaaa;
+          cursor: pointer;
+          font-size: 20px; }
+          .product-details .product-info .product-text .quantity-btn .input-group span:hover {
+            background: #ddd;
+            color: #fff;
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -ms-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease; }
+        .product-details .product-info .product-text .quantity-btn .input-group .form-control {
+          border: 0;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          text-align: center; }
+          .product-details .product-info .product-text .quantity-btn .input-group .form-control:hover {
+            border: 1px solid #ddd;
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -ms-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease; }
+    .product-details .product-info .product-text .p-button a {
+      padding: 10px 20px; }
     .product-details .product-info .delivery-text {
       background: #f9f9f9; }
       .product-details .product-info .delivery-text .delivery-option .del-header {
-        border-bottom: 1px solid #ddd;
         padding: 10px;
         text-transform: capitalize; }
         .product-details .product-info .delivery-text .delivery-option .del-header p {
           margin-top: 5px; }
+      .product-details .product-info .delivery-text .delivery-option .del-body {
+        border-top: 1px solid #ddd;
+        padding: 10px; }
+        .product-details .product-info .delivery-text .delivery-option .del-body ul > li {
+          padding: 5px 0; }
+          .product-details .product-info .delivery-text .delivery-option .del-body ul > li i {
+            vertical-align: middle; }
+  .product-details .product-description {
+    background: #fff;
+    -moz-box-shadow: 0 0 2px #ddd;
+    -webkit-box-shadow: 0 0 2px #ddd;
+    box-shadow: 0 0 2px #ddd;
+    margin: 10px 0; }
+    .product-details .product-description .description-header {
+      background: #eaeaea;
+      padding: 15px; }
+    .product-details .product-description .description-body {
+      padding: 15px; }
+  .product-details .related-product .rp-header {
+    padding: 10px 0; }
+
+.zoomLens {
+  width: 20px !important;
+  height: 20px !important; }
 
 /*# sourceMappingURL=theme.css.map */

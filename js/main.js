@@ -71,8 +71,11 @@ $(document).ready(function(){
     });
 
     $('#zoom_01').elevateZoom({
-	    zoomType: "inner",
-		cursor: "crosshair",
+		cursor: "default",
+		borderSize: 1,
+		responsive: true,
+		zoomLens: false,
+		zoomWindowWidth: 900,
 		zoomWindowFadeIn: 500,
 		zoomWindowFadeOut: 750
    	}); 
