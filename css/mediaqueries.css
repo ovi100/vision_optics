@@ -22,5 +22,81 @@
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .vision-header .vision-top-link {
+    position: fixed;
+    top: 40px;
+    right: 15px;
+    width: 155px;
+    height: auto;
+    background: #fff;
+    -moz-box-shadow: 0 0 10px #ddd;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+    display: none;
+    text-align: left;
+    z-index: 12; }
+    .vision-header .vision-top-link .container {
+      padding: 0; }
+    .vision-header .vision-top-link ul li {
+      display: block;
+      margin: 5px 0; }
+  .vision-header .vision-action-bar {
+    height: 58px;
+    line-height: 36px; }
+    .vision-header .vision-action-bar .vision-logo {
+      line-height: 28px; }
+      .vision-header .vision-action-bar .vision-logo img {
+        display: inline-block; }
+    .vision-header .vision-action-bar .vision-search-box {
+      text-align: center; }
+    .vision-header .vision-action-bar .vision-cart-icon a {
+      font-size: 20px; }
+      .vision-header .vision-action-bar .vision-cart-icon a .badge {
+        top: -2px;
+        right: 10px; }
+
+  .payment-social .payment-icon ul li {
+    margin-bottom: 5px; }
+
+  .categories-hslider .homecategory {
+    display: none; }
+  .categories-hslider .carousel-fade .carousel-indicators {
+    display: none; }
+
+  .product-box .product-name {
+    height: 60px; }
+  .product-box .product-button {
+    display: none; }
+  .product-box:hover {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+  .catalog .catalog-filter {
+    position: fixed;
+    top: 0;
+    left: -230px;
+    width: 225px;
+    height: 100%;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    padding: 0 10px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 12; }
+    .catalog .catalog-filter .filter-header {
+      padding: 10px;
+      text-align: right; }
+  .catalog .catalog-sort {
+    border-top: 1px solid #ddd; }
+    .catalog .catalog-sort .product-info {
+      text-align: center; }
+    .catalog .catalog-sort .mbl-filter i {
+      font-size: 20px; } }
 
 /*# sourceMappingURL=mediaqueries.css.map */

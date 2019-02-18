@@ -1,6 +1,6 @@
  /*------------------------------------
  *Author:MD ABU SAYED
- *Template:Storrea Light
+ *Template:Vision Optics
  *Version:1.0
  *-------------------------------------
  */
@@ -8,15 +8,62 @@
 
 $(document).ready(function(){
 
-	// $(window).scroll(function(){
-	//     if ($(this).scrollTop()>150){
-	//       $('.menu').addClass('fixed-menu');
+	$("body").click(function(e){
+  		$(".vision-top-link").fadeOut("fast");
+	});
+
+	$(window).scroll(function(){
+	    if ($(this).scrollTop()>150){
+	      $('.vision-action-bar').addClass('fixed-nav');
 	      
-	//     } 
-	//     else {
-	//       $('.menu').removeClass('fixed-menu');
-	//     }
- //  	});
+	    } 
+	    else {
+	      $('.vision-action-bar').removeClass('fixed-nav');
+	    }
+  	});
+
+  	$(".mobile-nav-icon").click(function(e){
+		e.stopPropagation();
+	  	$(".sidebar-wrapper").animate({
+	    	left: 0
+	  	}, "fast");
+	});
+
+  	$(".closetbn").click(function(){
+	  	$(".sidebar-wrapper").animate({
+	    	left: "-320px"
+	  	}, "fast");
+	});
+
+  	$(".mbls-icon").click(function(e){
+		e.stopPropagation();
+	  	$(".mbl-search-box").fadeToggle("fast");
+	});
+
+	$(".mbls-close").click(function(e){
+		e.stopPropagation();
+	  	$(".mbl-search-box").fadeOut("fast");
+	});
+
+  	$(".mbl-top-link").click(function(e){
+		e.stopPropagation();
+	  	$(".vision-top-link").fadeToggle("fast");
+	});
+
+
+	$(".mbl-filter").click(function(e){
+		e.stopPropagation();
+	  	$(".catalog-filter").animate({
+	    	left: 0
+	  	}, "fast");
+	});
+
+  	$(".filter-closetbn").click(function(){
+	  	$(".catalog-filter").animate({
+	    	left: "-230px"
+	  	}, "fast");
+	});
+
 
   	// if ($(window).width()<768){
    //    $('.col-logo').addClass('order-12');
