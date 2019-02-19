@@ -8,9 +8,13 @@
 
 $(document).ready(function(){
 
-	$("body").click(function(e){
-  		$(".vision-top-link").fadeOut("fast");
-	});
+	if ($(window).width()<766){
+     	$("body").click(function(e){
+  			$(".vision-top-link").fadeOut("fast");
+		});
+    } 
+
+	
 
 	$(window).scroll(function(){
 	    if ($(this).scrollTop()>150){
@@ -31,7 +35,7 @@ $(document).ready(function(){
 
   	$(".closetbn").click(function(){
 	  	$(".sidebar-wrapper").animate({
-	    	left: "-320px"
+	    	left: "-500px"
 	  	}, "fast");
 	});
 
@@ -54,13 +58,13 @@ $(document).ready(function(){
 	$(".mbl-filter").click(function(e){
 		e.stopPropagation();
 	  	$(".catalog-filter").animate({
-	    	left: 0
+	    	right: 0
 	  	}, "fast");
 	});
 
   	$(".filter-closetbn").click(function(){
 	  	$(".catalog-filter").animate({
-	    	left: "-230px"
+	    	right: "-230px"
 	  	}, "fast");
 	});
 
